@@ -3,9 +3,20 @@ const router = express.Router();
 const UserModel = require("../models/users");
 
 router.get("/authors", async (req, res) => {
+  const { page = 1, pageSize = 3 } = req.query;
+
   try {
-    const users = await UserModel.find();
-    res.status(200).send(users);
+    const users = await UserModel.find()
+      .limit(pageSize)
+      .skip((page - 1) * pageSize);
+
+    const totalUsers = await UserModel.countDocuments();
+
+    res.status(200).send({
+      currentPage: +page,
+      tatalPages: Math.ceil(totalUsers / pageSize),
+      users,
+    });
   } catch (e) {
     res.status(500).send({
       MessageEvent: "internal server error",

@@ -23,10 +23,10 @@ POST http://localhost:7777/authors
 Content-Type: application/json
 
 {
-    "nome": "Alessandro",
-    "cognome": "Manzoni",
-    "email": "alemanzo@ring.com",
-    "dataDiNascita": "22 Settembre 1536",
+    "nome": "Elena",
+    "cognome": "QuaQua",
+    "email": "paperinoquaqua@ring.com",
+    "dataDiNascita": "2 Ottobre 1456",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/2/25/Ritratto_di_Alessandro_Manzoni_by_Francesco_Hayez.jpg"
 }
 
