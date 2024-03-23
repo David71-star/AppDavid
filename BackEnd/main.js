@@ -17,6 +17,7 @@ const PORT = 7777;
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 //import delle routes
 const userRoute = require("./routes/users");
