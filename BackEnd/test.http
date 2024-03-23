@@ -1,0 +1,32 @@
+GET http://localhost:7777/authors
+
+####
+
+GET http://localhost:7777/authors/65fe8aa2f7d7ea4f6dc4c3f7
+
+
+####
+
+PATCH  http://localhost:7777/authors/65fe8aa2f7d7ea4f6dc4c3f7
+Content-Type: application/json
+
+{
+    "nome": "Ale"
+}
+####
+
+DELETE  http://localhost:7777/authors/65fe8aa2f7d7ea4f6dc4c3f7
+
+
+####
+POST http://localhost:7777/authors
+Content-Type: application/json
+
+{
+    "nome": "Alessandro",
+    "cognome": "Manzoni",
+    "email": "alemanzo@ring.com",
+    "dataDiNascita": "22 Settembre 1536",
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/2/25/Ritratto_di_Alessandro_Manzoni_by_Francesco_Hayez.jpg"
+}
+
