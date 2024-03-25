@@ -21,8 +21,10 @@ app.use(cors());
 
 //import delle routes
 const userRoute = require("./routes/users");
+const booksRoute = require("./routes/books");
+
 app.use("/", userRoute);
-app.use("/authors", userRoute);
+app.use("/", booksRoute);
 
 //connesione del database
 mongoose.connect(process.env.MONGODB_URL);

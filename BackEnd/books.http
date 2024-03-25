@@ -1,0 +1,16 @@
+POST http://localhost:7777/blogPosts
+Content-Type: application/json
+
+{
+    "category": "Fantasy",
+    "title": "Cronche di Narnia",
+    "cover": "https://m.media-amazon.com/images/I/51k3Ezus+NL.jpg",
+    "ReadTime":{
+        "value": 50,
+        "unit": "first"
+    },
+    "author":{
+        "name": "Clive Staples Lewis",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/1/1e/C.s.lewis3.JPG"
+    }
+}
